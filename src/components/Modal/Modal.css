@@ -1,0 +1,97 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.modal-content video {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.text-section {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 15px;
+    }
+
+    .close-button {
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .modal-content video {
+        max-height: 60vh;
+    }
+
+    .text-section {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 10px;
+        max-width: 95%;
+    }
+
+    .close-button {
+        font-size: 18px;
+        width: 22px;
+        height: 22px;
+    }
+
+    .modal-content video {
+        max-height: 50vh;
+    }
+
+    .text-section {
+        font-size: 10px;
+    }
+}

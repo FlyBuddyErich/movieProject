@@ -1,0 +1,89 @@
+html, body {
+    overflow-x: hidden;
+}
+
+.video-main {
+    margin-top: 150px;
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    z-index: 0;
+}
+
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    
+}
+
+.video-overlay h1 {
+    font-family: "Abril Fatface", serif;
+    font-size: 226px;
+    transition: 0.5s;
+    cursor: none;
+}
+
+.video-overlay p {
+    font-size: 20px;
+}
+
+.video-overlay a {
+    font-size: 20px;
+}
+
+.video-overlay h1:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+.video-button {
+    margin-top: 4rem;
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 1376px) {
+    .video-overlay h1 {
+        font-size: 104px;
+    }
+}
+
+
+@media screen and (max-width: 876px) {
+
+    .video-main {
+        height: 900px;
+    }
+
+    .video-overlay h1 {
+        font-size: 64px;
+    }
+
+
+}
+
+@media screen and (max-width: 376px) {
+    .video-overlay h1 {
+        font-size: 44px;
+    }
+}

@@ -1,0 +1,137 @@
+.cards-main {
+    background-color: white;
+    padding: 50px 5%;
+    margin-top: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-main h1 {
+    font-family: "Abril Fatface", serif;
+    font-size: 42px;
+}
+
+.cards-main p {
+    margin-top: 15px;
+    margin-bottom: 45px;
+    font-size: 16px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 25px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    height: 350px;
+    padding: 40px;
+    text-align: left;
+    row-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card-preson-picture {
+    width: 150px;
+    height: 250px;
+    border-radius: 5%;
+    align-self: flex-start;
+    margin-right: 20px;
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.card-text-name {
+    text-align: center;
+    font-weight: 700;
+    font-size: large;
+    padding-top: 15px;
+}
+
+.card-text-itself {
+    color: #22333B;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-text-author {
+    color: #22333B;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card-text hr {
+    margin-top: 70px;
+    width: 180px;
+    border: gray 1px solid;  
+}
+
+
+
+@media (max-width: 1368px) {
+    .cards-main {
+        padding: 30px 5%;
+    }
+
+    .card-text-name{
+        margin-top: 10px;
+    }
+
+    .cards-main h1 {    
+        font-size: 28px;
+    }
+
+    .cards-main p {
+        font-size: 14px;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    }
+}
+
+@media (max-width: 360px) {
+    .cards-main {
+        padding: 20px 20px;
+    }
+
+    .cards-main h1 {
+        font-size: 28px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .card-text-itself {
+        font-size: 18px;
+    }
+
+    .card-preson-picture {
+        object-fit: cover;
+        height: 220px;
+        width: 100px;
+    }
+}

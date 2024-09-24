@@ -1,0 +1,123 @@
+.about-main {
+    margin-top: 100px;
+    padding: 50px 5%;
+}
+
+.about-upper-title {
+    font-family: "Abril Fatface", serif;
+    color: #0A0908;
+    font-size: 42px;
+    text-align: left;
+    opacity: 0;
+    margin-bottom: 40px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.carousel {
+    border-radius: 30px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.about-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.about-element {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    margin-left: 15px;
+}
+
+
+.about-element img {
+    width: 20px;
+    height: 20px;
+    filter: invert(20%);
+}
+
+.upper-element-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.upper-element-text h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-upper-title {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about-main {
+        margin-top: 200px;
+    }
+
+    .about-container {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .about-row {
+        grid-template-columns: 1fr;
+    }
+
+    .about-upper-title {
+        font-size: 54px;
+    }
+
+    .carousel {
+        height: 460px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about-main {
+        margin-top: 50px;
+        padding: 30px 5%;
+    }
+
+    .about-upper-title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .carousel {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about-element {
+        padding: 15px;
+    }
+
+    .upper-element-text h3 {
+        font-size: 16px;
+    }
+}
